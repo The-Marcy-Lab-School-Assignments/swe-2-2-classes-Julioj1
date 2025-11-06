@@ -20,14 +20,14 @@
       "FrScTe17": 1,
       "FrScTe18": 1,
       "FrScTe19": 1,
-      "FrScTe20": 0,
+      "FrScTe20": 1,
       "FrScTe21": 1,
-      "FrScTe22": 0,
-      "FrScTe23": 0,
-      "FrScTe24": 0,
-      "FrScTe25": 0,
-      "FrScTe26": 0,
-      "FrScTe27": 0,
+      "FrScTe22": 1,
+      "FrScTe23": 1,
+      "FrScTe24": 1,
+      "FrScTe25": 1,
+      "FrScTe26": 1,
+      "FrScTe27": 1,
       "FrScTe28": 0,
       "FrScTe29": 0,
       "FrScTe30": 0,
@@ -110,7 +110,7 @@
     "From Scratch Tests BankAccount getTotalHoldings returns the total holdings across all BankAccount instances": "FrScTe34"
   },
   "humanReadable": {
-    "From Scratch Tests": "20/34",
-    "finalTestScore": "FINAL SCORE: 20/34"
+    "From Scratch Tests": "27/34",
+    "finalTestScore": "FINAL SCORE: 27/34"
   }
 }

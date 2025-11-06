@@ -66,7 +66,26 @@ class PasswordManager {
 }
 
 class TodoList {
-
+  #toDo = [];
+  constructor(title) {
+    this.title = title;
+  }
+  addItem(description) {
+    this.#toDo.push(description);
+    return this.#toDo.length;
+  }
+  removeItem(description) {
+    const itemToRemove = this.#toDo.indexOf(description);
+    if (itemToRemove != -1) {
+      const removedItem = this.#toDo.splice(itemToRemove, 1)
+      return removedItem[0];
+    } else {
+      return null;
+    }
+  }
+  getItems() {
+    return [...this.#toDo];
+  }
 }
 
 class BankAccount {
