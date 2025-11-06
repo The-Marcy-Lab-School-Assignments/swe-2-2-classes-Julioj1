@@ -89,7 +89,37 @@ class TodoList {
 }
 
 class BankAccount {
-
+  #balance;
+  static #totalOfBalances = 0;
+  constructor(firstName, lastName, balance) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    if (!balance) {
+      this.#balance = 0;
+    } else {
+      this.#balance = balance;
+    }
+    BankAccount.#totalOfBalances += this.#balance;
+  }
+  showBalance() {
+    return `Your balance is $${this.#balance.toFixed(2)}`
+  }
+  deposit(amount) {
+    this.#balance += amount;
+    BankAccount.#totalOfBalances += amount;
+    return `Your balance is $${this.#balance.toFixed(2)}`
+  }
+  withdraw(amount) {
+    if (amount > this.#balance) {
+      return `You do not have enough funds.`
+    }
+    this.#balance -= amount;
+    BankAccount.#totalOfBalances -= amount;
+    return `Your balance is $${this.#balance.toFixed(2)}.`
+  }
+  static getTotalHoldings() {
+    return BankAccount.#totalOfBalances;
+  }
 }
 
 module.exports = {
