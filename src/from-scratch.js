@@ -44,7 +44,25 @@ class Vehicle {
 }
 
 class PasswordManager {
-
+  #password;
+  constructor(password) {
+    this.#password = password;
+  }
+  checkPassword(attempt) {
+    if (attempt === this.#password) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  setPassword(oldPassword, newPassword) {
+    if (oldPassword === this.#password) {
+      this.#password = newPassword;
+      return true;
+    } else {
+      return false
+    }
+  }
 }
 
 class TodoList {
